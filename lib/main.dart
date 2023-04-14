@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'pages/home_page.dart';
 import 'pages/login_page.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 
 
 void main() {
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
       theme: ThemeData(
         primarySwatch: Colors.deepPurple
       ),
@@ -21,12 +23,13 @@ class MyApp extends StatelessWidget {
 
       darkTheme: ThemeData(
         brightness: Brightness.dark,
+        fontFamily: GoogleFonts.lato().fontFamily,
         // primarySwatch: Colors.green  
       ),
       initialRoute: "/home",
       routes:{
         "/":(context) => LoginPage(),
-        "/home" : (context) => HomePage(),
+        "/home" : (context) => LoginPage(),
         "/Loginpage" : (context) =>  LoginPage()
       } ,
     );
