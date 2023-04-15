@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'pages/home_page.dart';
 import 'pages/login_page.dart';
+import 'utils/routes.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -29,8 +31,8 @@ class MyApp extends StatelessWidget {
       initialRoute: "/home",
       routes:{
         "/":(context) => LoginPage(),
-        "/home" : (context) => LoginPage(),
-        "/Loginpage" : (context) =>  LoginPage()
+        MyRoute.homeRoute : (context) =>  HomePage(),
+        MyRoute.loginRoute: (context) => LoginPage(),
       } ,
     );
   }
