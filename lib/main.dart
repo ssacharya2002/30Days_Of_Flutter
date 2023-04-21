@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       themeMode: ThemeMode.light,
-      // debugShowCheckedModeBanner: false,  //it will remove the DEBUG banner in the screen
+      debugShowCheckedModeBanner: false,  //it will remove the DEBUG banner in the screen
       theme: ThemeData(
         primarySwatch: Colors.deepPurple
       ),
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.lato().fontFamily,
         // primarySwatch: Colors.green  
       ),
-      initialRoute: "/",
+      initialRoute: MyRoute.homeRoute,
       
       routes:{
         "/":(context) => LoginPage(),
